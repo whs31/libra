@@ -1,0 +1,9 @@
+[submodule "libs/3rd-party/range-v3"]
+	path = libs/3rd-party/range-v3
+	url = https://github.com/ericniebler/range-v3.git
+[submodule "libs/3rd-party/tl-expected"]
+	path = libs/3rd-party/tl-expected
+	url = https://github.com/TartanLlama/expected.git
+[submodule "libs/3rd-party/fmt"]
+	path = libs/3rd-party/fmt
+	url = https://github.com/fmtlib/fmt.git

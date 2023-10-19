@@ -27,16 +27,29 @@ if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_EXTENSIONS OFF)
 endif(NOT CMAKE_CXX_STANDARD)
 
+set(EXPECTED_BUILD_PACKAGE OFF CACHE BOOL "Build package files as well" FORCE)
+set(EXPECTED_BUILD_TESTS OFF CACHE BOOL "Build package files as well" FORCE)
+set(EXPECTED_BUILD_PACKAGE_DEB OFF CACHE BOOL "Build package files as well" FORCE)
+add_subdirectory(libs/3rd-party/tl-expected)
+
+set(RANGES_BUILD_CALENDAR_EXAMPLE OFF CACHE BOOL "Build package files as well" FORCE)
+set(RANGES_ASSERTIONS OFF CACHE BOOL "Build package files as well" FORCE)
+set(RANGES_DEBUG_INFO OFF CACHE BOOL "Build package files as well" FORCE)
+set(RANGES_VERBOSE_BUILD OFF CACHE BOOL "Build package files as well" FORCE)
+add_subdirectory(libs/3rd-party/range-v3)
+
 add_library(${PROJECT_NAME})
 
 target_sources(${PROJECT_NAME}
   PUBLIC
     include/Backbone/Global
+    include/Backbone/Expected
   PRIVATE
     src/c++/core/global.h
+    src/c++/core/expected.h
     src/c++/core/qtaliases_p.h
-    src/c++/cliparser/commandlineparser.h
-    src/c++/cliparser/commandlineparser.c++
+    src/c++/cli/commandlineparser.h
+    src/c++/cli/commandlineparser.c++
 )
 
 message(STATUS "[Backbone] Qt aliases status: ${BB_QT_TYPEDEFS}.")
@@ -46,5 +59,12 @@ if(BB_QT_TYPEDEFS)
 endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC include src/c++)
+
+target_link_libraries(${PROJECT_NAME}
+  PUBLIC
+    expected
+    range-v3
+  #PRIVATE
+)
 
 unset(BB_QT_TYPEDEFS CACHE)
