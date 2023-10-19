@@ -57,7 +57,7 @@ target_sources(${PROJECT_NAME}
 message(STATUS "[Backbone] Qt aliases status: ${BB_QT_TYPEDEFS}.")
 if(BB_QT_TYPEDEFS)
   message(STATUS "[Backbone] Enabling Qt type aliases.")
-  target_compile_definitions(${PROJECT_NAME} PRIVATE BB_ENABLE_QT_TYPEDEFS)
+  target_compile_definitions(${PROJECT_NAME} PUBLIC BB_ENABLE_QT_TYPEDEFS)
 endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC include src/c++)
