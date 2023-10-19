@@ -38,6 +38,8 @@ set(RANGES_DEBUG_INFO OFF CACHE BOOL "Build package files as well" FORCE)
 set(RANGES_VERBOSE_BUILD OFF CACHE BOOL "Build package files as well" FORCE)
 add_subdirectory(libs/3rd-party/range-v3)
 
+add_subdirectory(libs/3rd-party/fmt)
+
 add_library(${PROJECT_NAME})
 
 target_sources(${PROJECT_NAME}
@@ -64,6 +66,7 @@ target_link_libraries(${PROJECT_NAME}
   PUBLIC
     expected
     range-v3
+    fmt
   #PRIVATE
 )
 
