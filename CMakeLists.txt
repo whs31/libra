@@ -11,10 +11,10 @@ if(TARGET ${PROJECT_NAME})
   return()
 endif()
 
-option(LIBRA_QT_TYPEDEFS "Enable Qt-specific type aliases" ON)
+option(LIBRA_QT_TYPEDEFS "Enable Qt-specific type aliases" OFF)
 option(LIBRA_NO_FMT "Exclude <fmt> library and rely on std::format (c++20 and newer)" OFF)
-option(LIBRA_NO_RANGE_V3 "Exclude <range-v3> library and rely on std::ranges (c++23 and newer)" ON)
-option(LIBRA_NO_TL_EXPECTED "Exclude <tl-expected> library and rely on std::expected (c++23 and newer)" ON)
+option(LIBRA_NO_RANGE_V3 "Exclude <range-v3> library and rely on std::ranges (c++23 and newer)" OFF)
+option(LIBRA_NO_TL_EXPECTED "Exclude <tl-expected> library and rely on std::expected (c++23 and newer)" OFF)
 
 message(STATUS "[Libra] Library CMake loaded.")
 message(STATUS "[Libra] Qt aliases enabled: ${LIBRA_QT_TYPEDEFS}.")
