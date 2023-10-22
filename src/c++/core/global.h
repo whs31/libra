@@ -9,14 +9,16 @@
 #include <type_traits>
 #include <cstddef>
 
-namespace BB
+#include "cmake_defs.h"
+
+namespace Libra
 {
   template<typename T>
   using error_if_not_decimal = std::enable_if_t<std::is_floating_point<T>::value, T>;
 
   template<typename T>
   using error_if_not_decimal_bool = std::enable_if_t<std::is_floating_point<T>::value, bool>;
-} // BB
+} // Libra
 
 using i8 = int8_t;
 using i16 = int16_t;
@@ -33,7 +35,6 @@ using iptr = ptrdiff_t;
 using f32 = float;
 using f64 = double;
 
-
-#if defined(BB_ENABLE_QT_TYPEDEFS)
-#include "qtaliases_p.h"
+#if defined(LIBRA_QT)
+  #include "qtaliases_p.h"
 #endif
