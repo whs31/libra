@@ -45,6 +45,14 @@ target_sources(${PROJECT_NAME}
     src/c++/core/global.h
     src/c++/core/expected.h
     src/c++/core/qtaliases_p.h
+
+    src/c++/platform/arch_detection.h
+    src/c++/platform/compiler_detection.h
+    src/c++/platform/endian_detection.h
+    src/c++/platform/language_detection.h
+    src/c++/platform/os_detection.h
+    src/c++/platform/word_detection.h
+
     src/c++/cli/commandlineparser.h
     src/c++/cli/commandlineparser.c++
 )
