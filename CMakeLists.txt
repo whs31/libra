@@ -41,6 +41,7 @@ target_sources(${PROJECT_NAME}
     include/Libra/Global
     include/Libra/Expected
     include/Libra/Platform
+    include/Libra/Windows
   PRIVATE
     src/c++/cli/commandlineparser.h
     src/c++/cli/commandlineparser.c++
@@ -66,6 +67,7 @@ target_sources(${PROJECT_NAME}
     src/c++/platform/word_detection.h
     src/c++/platform/word_detection_p.h
     src/c++/platform/platform.h
+    src/c++/platform/windows_header.h
 )
 
 if(LIBRA_QT_TYPEDEFS)
