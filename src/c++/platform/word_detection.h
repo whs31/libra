@@ -4,9 +4,10 @@
 
 #pragma once
 
+#include "word_detection_p.h"
 #include <Libra/Global>
 
 namespace Libra::Private
 {
-  constexpr inline const usize word_size = sizeof(uptr);
+  constexpr inline const usize word_size = LIBRA_WORD_SIZE;
 } // Libra::Private

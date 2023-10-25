@@ -40,21 +40,32 @@ target_sources(${PROJECT_NAME}
   PUBLIC
     include/Libra/Global
     include/Libra/Expected
+    include/Libra/Platform
   PRIVATE
+    src/c++/cli/commandlineparser.h
+    src/c++/cli/commandlineparser.c++
+
     src/c++/core/cmake_defs.h
     src/c++/core/global.h
     src/c++/core/expected.h
     src/c++/core/qtaliases_p.h
 
-    src/c++/platform/arch_detection.h
-    src/c++/platform/compiler_detection.h
-    src/c++/platform/endian_detection.h
-    src/c++/platform/language_detection.h
-    src/c++/platform/os_detection.h
-    src/c++/platform/word_detection.h
+    src/c++/logging/scope_macro.h
+    src/c++/logging/logging.h
 
-    src/c++/cli/commandlineparser.h
-    src/c++/cli/commandlineparser.c++
+    src/c++/platform/arch_detection.h
+    src/c++/platform/arch_detection_p.h
+    src/c++/platform/compiler_detection.h
+    src/c++/platform/compiler_detection_p.h
+    src/c++/platform/endian_detection.h
+    src/c++/platform/endian_detection_p.h
+    src/c++/platform/language_detection.h
+    src/c++/platform/language_detection_p.h
+    src/c++/platform/os_detection.h
+    src/c++/platform/os_detection_p.h
+    src/c++/platform/word_detection.h
+    src/c++/platform/word_detection_p.h
+    src/c++/platform/platform.h
 )
 
 if(LIBRA_QT_TYPEDEFS)
