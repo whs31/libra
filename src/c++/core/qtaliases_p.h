@@ -67,7 +67,10 @@ namespace Qt
   using GeoShape = QGeoShape;
 } // Qt
 
-#define as_const qAsConst
+#if (defined(QT_VERSION_MAJOR) && QT_VERSION_MAJOR <= 5)
+  #define as_const qAsConst
+#endif
+
 #if !defined(invokable)
   #define invokable Q_INVOKABLE
 #else
