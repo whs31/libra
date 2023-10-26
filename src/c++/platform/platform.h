@@ -14,8 +14,13 @@
 #include "os_detection.h"
 #include "word_detection.h"
 
+#define LIBRA_STRINGIFY(x) LIBRA_STRINGIFY2(x)
+#define LIBRA_STRINGIFY2(x) #x
+
 #if defined(QT_CORE_LIB)
 #include <QtCore/QtGlobal>
+#pragma message "-- [LIBRA] Qt Libraries found"
+#pragma message("-- [LIBRA] Qt Version: " LIBRA_STRINGIFY(QT_VERSION_MAJOR) "." LIBRA_STRINGIFY(QT_VERSION_MINOR) "." LIBRA_STRINGIFY(QT_VERSION_PATCH))
 #endif
 
 namespace Libra
