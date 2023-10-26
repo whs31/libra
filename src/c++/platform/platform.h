@@ -46,17 +46,17 @@ namespace Libra
 
 namespace Libra
 {
-  Architecture Platform::architecture() noexcept { return Private::arch; }
-  Compiler Platform::compiler() noexcept { return Private::compiler; }
-  Endianness Platform::endianness() noexcept { return Private::endianness; }
-  CPlusPlusVersion Platform::standardVersion() noexcept { return Private::cxx_version; }
-  OperatingSystem Platform::os() noexcept { return Private::os; }
-  usize Platform::wordSize() noexcept { return Private::word_size; }
+  inline Architecture Platform::architecture() noexcept { return Private::arch; }
+  inline Compiler Platform::compiler() noexcept { return Private::compiler; }
+  inline Endianness Platform::endianness() noexcept { return Private::endianness; }
+  inline CPlusPlusVersion Platform::standardVersion() noexcept { return Private::cxx_version; }
+  inline OperatingSystem Platform::os() noexcept { return Private::os; }
+  inline usize Platform::wordSize() noexcept { return Private::word_size; }
 
   #if defined(QT_CORE_LIB)
-  u8 Platform::qtVersionMajor() noexcept { return QT_VERSION_MAJOR; }
-  u8 Platform::qtVersionMinor() noexcept { return QT_VERSION_MINOR; }
-  u8 Platform::qtVersionPatch() noexcept { return QT_VERSION_PATCH; }
-  const char* Platform::qtVersion() noexcept { return qVersion(); }
+  inline u8 Platform::qtVersionMajor() noexcept { return QT_VERSION_MAJOR; }
+  inline u8 Platform::qtVersionMinor() noexcept { return QT_VERSION_MINOR; }
+  inline u8 Platform::qtVersionPatch() noexcept { return QT_VERSION_PATCH; }
+  inline const char* Platform::qtVersion() noexcept { return qVersion(); }
   #endif
 } // Libra
