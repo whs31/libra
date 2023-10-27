@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include "cmake_defs.h"
+
 #if defined(LIBRA_EXPECTED)
   #include <tl/expected.hpp>
   using namespace tl;
