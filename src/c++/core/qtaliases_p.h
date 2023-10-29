@@ -34,6 +34,8 @@ class QGeoPolygon;
 class QGeoRectangle;
 class QGeoShape;
 
+using u64s = quint64;
+
 namespace Qt
 {
   using Object = QObject;
