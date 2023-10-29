@@ -75,7 +75,7 @@ namespace Qt
 
 #if !defined(invokable)
   #define invokable Q_INVOKABLE
-  #define bindable Q_SLOT
+  #define connectable_slot Q_SLOT
 #else
   #error "Somebody defined <invokable>..."
 #endif
