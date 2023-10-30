@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <QtCore/QtGlobal>
+
 class QObject;
 class QColor;
 class QVariant;
@@ -33,6 +35,10 @@ class QGeoPath;
 class QGeoPolygon;
 class QGeoRectangle;
 class QGeoShape;
+
+class QCoreApplication;
+class QGuiApplication;
+class QApplication;
 
 using u64s = quint64;
 
@@ -67,6 +73,10 @@ namespace Qt
   using GeoPolygon = QGeoPolygon;
   using GeoRectangle = QGeoRectangle;
   using GeoShape = QGeoShape;
+
+  using CoreApplication = QCoreApplication;
+  using GuiApplication = QGuiApplication;
+  using Application = QApplication;
 } // Qt
 
 #if (defined(QT_VERSION_MAJOR) && QT_VERSION_MAJOR <= 5)
