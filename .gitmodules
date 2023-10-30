@@ -1,9 +1,3 @@
 [submodule "libs/3rd-party/tl-expected"]
 	path = libs/3rd-party/tl-expected
 	url = ../expected.git
-[submodule "libs/3rd-party/fmt"]
-	path = libs/3rd-party/fmt
-	url = ../fmt.git
-[submodule "libs/3rd-party/range-v3"]
-	path = libs/3rd-party/range-v3
-	url = ../range-v3.git
