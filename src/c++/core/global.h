@@ -35,6 +35,18 @@ using iptr = ptrdiff_t;
 using f32 = float;
 using f64 = double;
 
+namespace Libra::literals
+{
+  inline u8 operator "" _u8(unsigned long long value) { return static_cast<u8>(value); }
+  inline u16 operator "" _u16(unsigned long long value) { return static_cast<u16>(value); }
+  inline u32 operator "" _u32(unsigned long long value) { return static_cast<u32>(value); }
+  inline u64 operator "" _u64(unsigned long long value) { return static_cast<u64>(value); }
+  inline i8 operator "" _i8(unsigned long long value) { return static_cast<i8>(value); }
+  inline i16 operator "" _i16(unsigned long long value) { return static_cast<i16>(value); }
+  inline i32 operator "" _i32(unsigned long long value) { return static_cast<i32>(value); }
+  inline i64 operator "" _i64(unsigned long long value) { return static_cast<i64>(value); }
+} // Libra::literals
+
 #if defined(LIBRA_QT)
   #include "qtaliases_p.h"
 #endif
